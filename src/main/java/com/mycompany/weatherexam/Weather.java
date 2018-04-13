@@ -29,6 +29,8 @@ public class Weather {
             //buscamos y metemos en "frase" la frase que describe el tiempo
             Elements frase = doc.select("div.today_nowcard-phrase");
             //Finalmente imprimimos los datos 
+            //Los .text() son necesarios para que no se impriman etiquetas innecesarias y solo se tenga en 
+            //cuenta el contenido.
             System.out.println("Hoy está " + frase.text() + " y hace " + temp.text() + ". Datos extraídos de Vigo, España Pronóstico del tiempo y condiciones meteorológicas - The Weather Channel | Weather.com");
         } catch (Exception exception) {
             System.exit(0);
